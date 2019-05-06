@@ -1,6 +1,3 @@
-call plug#begin()
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-call plug#end()
 syntax on
 set nocompatible
 set ruler
@@ -81,21 +78,6 @@ inoremap <BS> <ESC>:call RemovePair()<CR>x:call BackToInsertMode()<CR>a
 " inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 " inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 " inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
-
-filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Raimondi/delimitMate'
-" Ctrl-P
-Plugin 'https://github.com/kien/ctrlp.vim'
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 " Ctrl-P mapping
 let g:ctrlp_map = '<c-p>'
